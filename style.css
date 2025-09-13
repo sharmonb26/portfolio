@@ -1,1 +1,285 @@
 /* Add you CSS here */
+
+/* Use a clean, modern font for the whole page */
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+    /* White background with diagonal pastel bars */
+    /* Abstract, modern background with large pastel blobs using gradients */
+    background: 
+      radial-gradient(circle at 15% 20%, #e6e6fa 0 180px, transparent 200px), /* lavender blob */
+      radial-gradient(circle at 80% 30%, #ffe4ec 0 160px, transparent 180px), /* peach blob */
+      radial-gradient(circle at 40% 80%, #fff9e4 0 140px, transparent 160px), /* off-white blob */
+      #fff; /* clean white base */
+  margin: 0;
+  padding: 0;
+}
+
+/* Style for each section to use the same color theme as the header */
+.section {
+  width: 100%; /* Full width of the page */
+  margin: 0; /* No vertical gap between sections */
+  padding: 32px 24px; /* Add space inside section */
+  /* Transparent background for all sections to show body gradient */
+  background: transparent;
+  border-radius: 0; /* No rounded corners */
+  box-shadow: 0 4px 16px rgba(0,0,0,0.05); /* Soft shadow for modern look */
+  min-height: 300px; /* Increase the minimum height of each section */
+  display: flex;              /* Use flexbox for easy centering */
+  flex-direction: column;     /* Stack children vertically */
+  justify-content: center;    /* Center vertically */
+  align-items: center;        /* Center horizontally */
+  color: #222; /* Use dark text for readability */
+}
+
+/* Header styles */
+header.section {
+  background: transparent; /* Show body gradient in header */
+  text-align: center;
+  color: #222; /* Ensure header text is dark for readability */
+}
+
+/* Section titles */
+.section h2 {
+  margin-top: 0;
+  font-size: 2em;
+  color: #222;
+  letter-spacing: 2px;
+  text-align: center; /* Center the heading */
+}
+
+/* Left-align the About Me heading and add space below */
+.section.about-me h2 {
+  text-align: left;
+  margin-bottom: 24px;
+  margin-left: 32px; /* Move heading to the right slightly */
+}
+
+/* Make sure text inside sections is centered */
+.section p,
+.section ul,
+.section li,
+.section .horizontal-list {
+  text-align: center;
+}
+
+/* Left-align text in About Me section for beginners */
+.section.about-me p {
+  text-align: left;
+}
+
+/* Project and song lists */
+.section ul {
+  list-style: none; /* Remove default bullets */
+  padding: 0;
+}
+
+.section li {
+  margin-bottom: 12px;
+  padding: 8px;
+  border-bottom: 1px solid #eee; /* Light line between items */
+}
+
+/* Horizontal list for projects and songs */
+.horizontal-list {
+  display: flex; /* Show items side by side */
+  justify-content: center; /* Center items horizontally */
+  gap: 32px; /* Space between items */
+  margin-top: 24px;
+}
+
+/* Each item in the horizontal list */
+.list-item {
+  display: flex;
+  flex-direction: column; /* Stack icon above text */
+  align-items: center; /* Center icon and text */
+  width: 160px; /* Set a fixed width for each item */
+  text-align: center; /* Center text */
+}
+
+/* Icon above each project/song */
+.item-icon {
+  width: 120px;           /* Increased icon size */
+  height: 120px;          /* Increased icon size */
+  object-fit: cover;      /* Crop image to fit and avoid distortion */
+  border-radius: 50%;     /* Make icons round */
+  margin-bottom: 12px;
+  border: 3px solid #fff; /* White border for contrast */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10); /* Soft shadow */
+}
+
+/* Text under the icon */
+.item-text {
+  font-size: 1em;
+  color: #333;
+}
+
+/* Icon links for connect section */
+.icon-links {
+  display: flex; /* Place icons in a row */
+  gap: 24px; /* Space between icons */
+  justify-content: center; /* Center icons */
+  margin-top: 16px;
+}
+
+/* Style for icons */
+.icon {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.2s;
+  /* Add a little artsy effect on hover */
+}
+
+.icon-links a:hover .icon {
+  transform: scale(1.15) rotate(-8deg);
+}
+
+/* Make the whole project/song item clickable */
+.list-item-link {
+  text-decoration: none; /* Remove underline from links */
+  color: inherit; /* Use normal text color */
+}
+
+/* Add a soft, flowing hover effect for clickable items */
+.list-item-link:hover .list-item {
+  /* Remove box-shadow and glow on hover */
+  transform: scale(1.05);
+  transition: transform 0.2s;
+  cursor: pointer; /* Show pointer cursor */
+}
+
+/* Style for the Contact Me button in the header */
+.contact-btn {
+  display: inline-block; /* Make the link look like a button */
+  margin-top: 16px;      /* Space above the button */
+  padding: 10px 24px;    /* Button size */
+  background: #ffb6b9;   /* Button color */
+  color: #222;           /* Text color */
+  font-size: 1em;        /* Font size */
+  border: none;          /* No border */
+  border-radius: 4px;    /* Slightly rounded corners */
+  text-decoration: none; /* Remove underline */
+  cursor: pointer;       /* Pointer cursor on hover */
+  transition: background 0.2s;
+}
+
+/* Button hover effect */
+.contact-btn:hover {
+  background: #fae3d9;
+}
+
+/* Copyright section styles */
+.copyright {
+  width: 100vw;              /* Make copyright span the entire viewport width */
+  min-width: 100%;           /* Ensure it covers full width */
+  text-align: center;        /* Center the text */
+  padding: 16px 0;           /* Add space above and below */
+  background: #fff;       /* White background for copyright */
+  color: #888;               /* Soft gray text */
+  font-size: 1em;
+  position: relative;        /* Keep normal flow */
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+/* Center the text in the About Me section */
+/* Change to left-align for About Me section text */
+.section.about-me {
+  text-align: left;
+}
+
+/* Simple navigation bar styles */
+.navbar {
+  width: 105vw;              
+  min-width: 100%;           
+  background: #fff;       /* White background for navbar */
+  padding: 18px 0;           
+  text-align: center;        
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07); 
+  position: relative;        
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+}
+
+/* Style for nav links */
+.navbar a {
+  color: #222;              /* Dark text */
+  text-decoration: none;    /* No underline */
+  font-size: 1.15em;        /* Slightly larger text */
+  margin: 0 28px;           /* More space between links */
+  padding: 10px 18px;       /* Larger clickable area */
+  border-radius: 8px;       /* More rounded corners */
+  letter-spacing: 2px;      /* Spread out the letters */
+  background: transparent;  /* No background by default */
+  transition: background 0.2s, color 0.2s;
+  font-weight: 500;         /* Slightly bolder text */
+  box-shadow: none;         /* No underline or border */
+}
+
+/* Hover effect for nav links */
+.navbar a:hover {
+  background: #fae3d9;
+  color: #d72660;           /* Accent color on hover */
+}
+
+/* Style for the About Me image */
+/* Make the image container large and rectangular for full display */
+.about-img {
+  width: 300px;           /* Make image wider */
+  height: 180px;          /* Make image taller */
+  object-fit: cover;      /* Crop image to fit the rectangle */
+  border-radius: 16px;    /* Slightly rounded corners for rectangle */
+  margin-bottom: 18px;    /* Space below image */
+  border: 4px solid #fff; /* White border for contrast */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.10); /* Soft shadow */
+}
+
+/* Container for About Me text and image side by side */
+.about-content {
+  display: flex;           /* Show children side by side */
+  flex-direction: row;     /* Row direction: text left, image right */
+  justify-content: center; /* Center horizontally in section */
+  align-items: center;     /* Center vertically in section */
+  gap: 32px;               /* Space between text and image */
+  width: 100%;             /* Take full width of section */
+  max-width: 600px;        /* Limit width for readability */
+}
+
+/* About Me text styles */
+/* Make the text stretch across the screen horizontally */
+.about-text {
+  flex: 1;                 /* Take up remaining space */
+  text-align: left;        /* Align text to the left */
+  margin-right: 0;         /* No extra margin */
+  max-width: none;         /* Remove width limit so text can go wide */
+  width: 100%;             /* Stretch text to fill available space */
+  line-height: 1.5;        /* Normal line spacing */
+  font-size: 1.15em;       /* Slightly larger text for easier reading */
+}
+
+/* Reduce gap between Songs heading and paragraph for beginners */
+#songs h2 {
+  margin-bottom: 8px; /* Smaller space below heading */
+}
+
+#songs p {
+  margin-top: 0;      /* Remove extra space above paragraph */
+  margin-bottom: 18px; /* Keep a little space before the song list */
+}
+
+/* Make project cards bigger and add more space between them */
+#projects .horizontal-list {
+  gap: 48px;        /* Bigger gap between project cards */
+}
+
+/* Make each project card bigger */
+#projects .list-item {
+  width: 220px;     /* Increase card width */
+  min-height: 140px;/* Increase card height */
+  padding: 24px 12px; /* Add padding for a larger look */
+  box-sizing: border-box; /* Include padding in width/height */
+}
+
